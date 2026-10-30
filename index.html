@@ -64,7 +64,7 @@
   .btn { font: inherit; display: inline-block; padding: .6rem 1.2rem; border: 3px solid var(--ink); border-radius: 2rem; background: #fff; color: var(--ink); cursor: pointer; text-decoration: none; box-shadow: 0 4px 0 var(--ink); }
   .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
 
-  .stage { position: relative; width: 100%; aspect-ratio: 3 / 2; background: #fff; border: 3px solid var(--ink); border-radius: 1rem; overflow: hidden; margin: .75rem 0; }
+  .stage { position: relative; width: 100%; aspect-ratio: 5 / 4; max-width: 30rem; background: #fff; border: 3px solid var(--ink); border-radius: 1rem; overflow: hidden; margin: .75rem auto; }
   .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
   #draw { touch-action: none; cursor: crosshair; }
   .row { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin-bottom: .75rem; }
@@ -189,6 +189,45 @@
   <symbol id="p-moon" viewBox="0 0 100 100">
     <path d="M62 8 A42 42 0 1 0 92 68 A34 34 0 0 1 62 8Z" fill="#ebd07a" stroke="#2b3550" stroke-width="4" stroke-linejoin="round"/>
   </symbol>
+  <symbol id="p-acacia" viewBox="0 0 100 100">
+    <path d="M50 96 V58 M50 66 L30 48 M50 62 L72 44" fill="none" stroke="#2b3550" stroke-width="6" stroke-linecap="round"/>
+    <path d="M4 44 Q8 22 50 24 Q92 22 96 44 Q70 52 50 46 Q30 52 4 44Z" fill="#cfc784" stroke="#2b3550" stroke-width="4" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="p-matatu" viewBox="0 0 100 100">
+    <rect x="4" y="30" width="92" height="46" rx="10" fill="#86abd2" stroke="#2b3550" stroke-width="4"/>
+    <rect x="10" y="38" width="16" height="14" rx="3" fill="#dce8f4" stroke="#2b3550" stroke-width="3"/>
+    <rect x="30" y="38" width="16" height="14" rx="3" fill="#dce8f4" stroke="#2b3550" stroke-width="3"/>
+    <rect x="50" y="38" width="16" height="14" rx="3" fill="#dce8f4" stroke="#2b3550" stroke-width="3"/>
+    <path d="M72 38 H88 Q92 38 92 44 V52 H72Z" fill="#dce8f4" stroke="#2b3550" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="4" y="58" width="92" height="8" fill="#ebd07a" stroke="#2b3550" stroke-width="3"/>
+    <circle cx="28" cy="78" r="10" fill="#2b3550"/><circle cx="28" cy="78" r="4" fill="#dce8f4"/>
+    <circle cx="72" cy="78" r="10" fill="#2b3550"/><circle cx="72" cy="78" r="4" fill="#dce8f4"/>
+  </symbol>
+  <symbol id="p-mandazi" viewBox="0 0 100 100">
+    <ellipse cx="50" cy="72" rx="46" ry="12" fill="#fff" stroke="#2b3550" stroke-width="4"/>
+    <path d="M16 68 L32 40 L48 68Z" fill="#dcb45c" stroke="#2b3550" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M42 68 L58 36 L74 68Z" fill="#dcb45c" stroke="#2b3550" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M60 68 L76 42 L90 68Z" fill="#dcb45c" stroke="#2b3550" stroke-width="4" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="p-tembo" viewBox="0 0 100 100">
+    <rect x="30" y="68" width="12" height="24" rx="4" fill="#9db3cc" stroke="#2b3550" stroke-width="4"/>
+    <rect x="66" y="68" width="12" height="24" rx="4" fill="#9db3cc" stroke="#2b3550" stroke-width="4"/>
+    <ellipse cx="58" cy="58" rx="32" ry="24" fill="#9db3cc" stroke="#2b3550" stroke-width="4"/>
+    <circle cx="28" cy="42" r="20" fill="#9db3cc" stroke="#2b3550" stroke-width="4"/>
+    <ellipse cx="42" cy="46" rx="10" ry="14" fill="#b8c9dc" stroke="#2b3550" stroke-width="3"/>
+    <path d="M16 50 Q4 62 10 80 Q12 86 18 82" fill="none" stroke="#2b3550" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="24" cy="38" r="3" fill="#2b3550"/>
+  </symbol>
+  <symbol id="p-twiga" viewBox="0 0 100 100">
+    <path d="M32 72 V94 M44 74 V94 M62 74 V94 M72 72 V94" stroke="#2b3550" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="52" cy="66" rx="26" ry="14" fill="#ebd07a" stroke="#2b3550" stroke-width="4"/>
+    <path d="M26 62 Q16 66 18 78" fill="none" stroke="#2b3550" stroke-width="4" stroke-linecap="round"/>
+    <path d="M64 60 L74 18 L84 20 L78 62Z" fill="#ebd07a" stroke="#2b3550" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="84" cy="14" rx="12" ry="7" fill="#ebd07a" stroke="#2b3550" stroke-width="4"/>
+    <path d="M78 8 V2 M88 8 V2" stroke="#2b3550" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="88" cy="13" r="2" fill="#2b3550"/>
+    <circle cx="44" cy="64" r="4" fill="#d98a80"/><circle cx="58" cy="70" r="4" fill="#d98a80"/><circle cx="73" cy="40" r="3.5" fill="#d98a80"/>
+  </symbol>
 </svg>
 
 <header>
@@ -246,14 +285,14 @@
     <h2><svg class="mm" aria-hidden="true"><use href="#m-yellow"/></svg>Literacy games</h2>
     <ul class="list">
       <li id="gameBox">
-        <h3>Sound match</h3>
+        <h3>Safari Sound Match</h3>
         <p id="gQ">Press Start to play.</p>
         <div class="row" id="gChoices"></div>
         <p id="gMsg" aria-live="polite"></p>
         <div class="row"><button class="btn" id="gHear" type="button">Hear the letter</button><button class="btn" id="gNext" type="button">Start</button></div>
         <p class="small" id="gScore">Stars: 0</p>
       </li>
-      <li id="gRhyme"><h3>Rhyme match</h3><p class="gq">Press Start to play.</p><div class="row gc"></div><p class="gm" aria-live="polite"></p><div class="row"><button class="btn gh" type="button">Hear it</button><button class="btn gn" type="button">Start</button></div><p class="small gs">Stars: 0</p></li>
+      <li id="gRhyme"><h3>Soko Rhyme Match</h3><p class="gq">Press Start to play.</p><div class="row gc"></div><p class="gm" aria-live="polite"></p><div class="row"><button class="btn gh" type="button">Hear it</button><button class="btn gn" type="button">Start</button></div><p class="small gs">Stars: 0</p></li>
       <li id="gPair"><h3>Letter partners</h3><p class="gq">Press Start to play.</p><div class="row gc"></div><p class="gm" aria-live="polite"></p><div class="row"><button class="btn gh" type="button">Hear it</button><button class="btn gn" type="button">Start</button></div><p class="small gs">Stars: 0</p></li>
     </ul>
   </section>
@@ -294,10 +333,10 @@
     <h2><svg class="mm" aria-hidden="true"><use href="#m-red"/></svg>Rhymes</h2>
     <p>Tap Hear it to listen to each rhyme.</p>
     <ul class="list">
-      <li><h3>Humpty Dumpty</h3><p class="rhyme">Humpty Dumpty sat on a wall,<br>Humpty Dumpty had a great fall.<br>All the king's horses and all the king's men<br>Couldn't put Humpty together again.</p><button class="btn rh" type="button">Hear it</button></li>
-      <li><h3>Twinkle, Twinkle, Little Star</h3><p class="rhyme">Twinkle, twinkle, little star,<br>How I wonder what you are!<br>Up above the world so high,<br>Like a diamond in the sky.</p><button class="btn rh" type="button">Hear it</button></li>
-      <li><h3>Jack and Jill</h3><p class="rhyme">Jack and Jill went up the hill<br>To fetch a pail of water.<br>Jack fell down and broke his crown,<br>And Jill came tumbling after.</p><button class="btn rh" type="button">Hear it</button></li>
-      <li><h3>Hickory Dickory Dock</h3><p class="rhyme">Hickory, dickory, dock!<br>The mouse ran up the clock.<br>The clock struck one,<br>The mouse ran down,<br>Hickory, dickory, dock.</p><button class="btn rh" type="button">Hear it</button></li>
+      <li><h3>Twiga, Twiga</h3><p class="rhyme">Twiga, twiga, tall, tall, tall,<br>You can see us one and all.<br>Munch on leaves up in the tree,<br>What a view for you to see!</p><button class="btn rh" type="button">Hear it</button></li>
+      <li><h3>Beep, Beep, Matatu</h3><p class="rhyme">Painted red and gold and blue,<br>Here comes the matatu, beep, beep, beep!<br>Hop on board, there is room for you,<br>Rolling past the hills so steep!</p><button class="btn rh" type="button">Hear it</button></li>
+      <li><h3>At the Soko</h3><p class="rhyme">One, two, a mango for you,<br>Three, four, bananas galore,<br>Five, six, a pawpaw to pick,<br>Seven, eight, mandazi on a plate,<br>Nine, ten, let us shop again!</p><button class="btn rh" type="button">Hear it</button></li>
+      <li><h3>Lala Salama, Tembo</h3><p class="rhyme">Lala salama, little tembo,<br>The sun has gone to bed.<br>The stars are shining softly,<br>Rest your big, sleepy head.<br>Lala salama, little twiga,<br>The moon is bright and high.<br>The savanna is so quiet,<br>Close your eyes. Good night.</p><button class="btn rh" type="button">Hear it</button></li>
     </ul>
   </section>
 
@@ -350,6 +389,7 @@
     <p>Voice: the page reads aloud in English. It looks for a Kenyan English voice first, then the closest one on this device. You can pick a different voice here.</p>
     <select id="voiceSel" aria-label="Voice"></select>
     <div class="row" style="margin-top:.75rem"><button class="btn" id="voiceTest" type="button">Test voice</button></div>
+    <p class="small" id="voiceNote"></p>
     <p class="small">Stars and missions are saved on this device only.</p>
     <button class="btn" id="resetStars" type="button">Reset my stars</button>
   </section>
@@ -441,23 +481,41 @@
     renderStars();
     toast((pre || "") + msg);
   }
-  var segs = [], timer = null, gfont = "", gfs = 0, gStart = null;
+  var segs = [], timer = null, gfont = "", gfs = 0, strokes = [];
   var SND = "a,b,k,d,e,f,g,h,i,j,k,l,m,n,o,p,kw,r,s,t,u,v,w,ks,y,z".split(",");
-  var WORDS = "apple,ball,cat,dog,egg,fish,goat,hat,igloo,jam,kite,lion,moon,nest,octopus,pig,queen,rabbit,sun,tiger,umbrella,van,web,x-ray,yak,zebra".split(",");
+  var WORDS = "ant,banana,cow,drum,elephant,fish,goat,hippo,impala,jackal,kite,lion,matatu,Nairobi,ostrich,pawpaw,queen,rhino,sun,tea,umbrella,van,warthog,x-ray,yam,zebra".split(",");
   var UP = "clrlllrlcollllololrcllllll", LO = "rlrrmorlcclcllolrlrcllllll";
   var START = { l: [0, 0], c: [.5, 0], r: [.85, .2], o: [.65, .05], m: [0, .5] };
-  var VOICE = null, voices = [];
+  var VOICE = null, voices = [], lastU = null, unlocked = false;
   function say(t) {
+    var ss = window.speechSynthesis;
+    if (!ss || typeof SpeechSynthesisUtterance === "undefined") {
+      toast("Reading aloud is not available in this browser. Try Chrome or Safari.");
+      return;
+    }
     try {
-      if (!window.speechSynthesis) return;
-      window.speechSynthesis.cancel();
       var u = new SpeechSynthesisUtterance(t);
       u.rate = 0.8;
-      if (VOICE) u.voice = VOICE;
-      u.lang = VOICE ? VOICE.lang : "en-KE";
-      window.speechSynthesis.speak(u);
+      if (VOICE) { u.voice = VOICE; u.lang = VOICE.lang; } else { u.lang = "en"; }
+      lastU = u;
+      var go = function () { try { ss.resume(); ss.speak(u); } catch (e) {} };
+      if (ss.speaking || ss.pending) { ss.cancel(); setTimeout(go, 80); } else { go(); }
     } catch (err) {}
   }
+  function unlockSpeech() {
+    if (unlocked) return;
+    unlocked = true;
+    try {
+      var ss = window.speechSynthesis;
+      if (!ss || typeof SpeechSynthesisUtterance === "undefined") return;
+      var u = new SpeechSynthesisUtterance(" ");
+      u.volume = 0;
+      ss.speak(u);
+    } catch (e) {}
+  }
+  ["pointerdown", "touchstart", "click", "keydown"].forEach(function (ev) {
+    document.addEventListener(ev, unlockSpeech, { once: true, capture: true });
+  });
   var gc = document.getElementById("guide"), dc = document.getElementById("draw");
   var g = gc.getContext("2d"), d = dc.getContext("2d");
 
@@ -475,6 +533,102 @@
     });
   }
 
+  var GLYPHS = {"a":["A .5 1.5 .5 .5 -70 -430|M 1 1 L 1 2","Stroke 1: draw a round circle, like a magic c. Stroke 2: draw a straight line down on the right side."],"b":["M 0 0 L 0 2|M 0 1.5 A .5 1.5 .5 .5 180 540","Stroke 1: draw a long line down. Stroke 2: start in the middle of the line and draw a circle around to the right."],"c":["A .5 1.5 .5 .5 -45 -315","Draw a magic c: start near the middle line, curve around to the left and finish at the bottom."],"d":["A .5 1.5 .5 .5 -70 -430|M 1 0 L 1 2","Stroke 1: draw a round circle, like a magic c. Stroke 2: draw a tall straight line down on the right side."],"e":["M 0 1.5 L 1 1.5 A .5 1.5 .5 .5 0 -315","Draw a line across the middle, then curve up and around like a magic c."],"f":["M .8 .35 A .55 .35 .25 .35 0 -180 L .3 2|M 0 1 L .7 1","Stroke 1: curve up and over, then go straight down. Stroke 2: draw a short line across the middle."],"g":["A .5 1.5 .5 .5 -70 -430|M 1 1 L 1 2.5 A .6 2.5 .4 .5 0 135","Stroke 1: draw a round circle, like a magic c. Stroke 2: draw a line down on the right side and curve it to the left below the line."],"h":["M 0 0 L 0 2|M 0 1.5 A .5 1.5 .5 .5 180 360 L 1 2","Stroke 1: draw a long line down. Stroke 2: start in the middle, go up over a hill and straight down."],"i":["M .5 1 L .5 2|M .5 .55 L .5 .56","Stroke 1: draw a short line down. Stroke 2: put a dot on top."],"j":["M .5 1 L .5 2.5 A .15 2.5 .35 .5 0 135|M .5 .55 L .5 .56","Stroke 1: draw a line down and curve it to the left. Stroke 2: put a dot on top."],"k":["M 0 0 L 0 2|M .8 1 L 0 1.6|M .2 1.45 L .85 2","Stroke 1: draw a long line down. Stroke 2: draw a slanting line in to the middle. Stroke 3: draw a slanting line out to the bottom."],"l":["M .5 0 L .5 2","Draw a long line straight down."],"m":["M 0 1 L 0 2|M 0 1.35 A .35 1.35 .35 .35 180 360 L .7 2|M .7 1.35 A 1.05 1.35 .35 .35 180 360 L 1.4 2","Stroke 1: draw a short line down. Stroke 2: go up and over a hill, then down. Stroke 3: go up and over another hill, then down."],"n":["M 0 1 L 0 2|M 0 1.45 A .45 1.45 .45 .45 180 360 L .9 2","Stroke 1: draw a short line down. Stroke 2: go up and over a hill, then straight down."],"o":["A .5 1.5 .5 .5 -70 -430","Draw a round circle, like a magic c all the way around."],"p":["M 0 1 L 0 3|M 0 1.5 A .5 1.5 .5 .5 180 540","Stroke 1: draw a line down, past the bottom line. Stroke 2: start in the middle of the line and draw a circle around to the right."],"q":["A .5 1.5 .5 .5 -70 -430|M 1 1 L 1 3","Stroke 1: draw a round circle, like a magic c. Stroke 2: draw a line down on the right side, past the bottom line."],"r":["M 0 1 L 0 2|M 0 1.5 A .4 1.5 .4 .5 180 300","Stroke 1: draw a short line down. Stroke 2: start in the middle and curve up and over to the right."],"s":["A .5 1.25 .45 .25 -30 -270 A .5 1.75 .45 .25 -90 150","Draw a curvy snake: start at the top right, curve to the left, then curve back to the right and finish at the bottom."],"t":["M .5 .35 L .5 2|M .1 1 L .9 1","Stroke 1: draw a line down. Stroke 2: draw a short line across."],"u":["M 0 1 L 0 1.55 A .45 1.55 .45 .45 180 0|M .9 1 L .9 2","Stroke 1: draw down, curve around the bottom and go up. Stroke 2: draw a short line down on the right side."],"v":["M 0 1 L .45 2 L .9 1","Draw a line down to a point, then up again."],"w":["M 0 1 L .35 2 L .7 1 L 1.05 2 L 1.4 1","Draw down, up, down, up, to make two points."],"x":["M 0 1 L .9 2|M .9 1 L 0 2","Stroke 1: draw a slanting line down to the right. Stroke 2: draw a slanting line down to the left."],"y":["M 0 1 L .45 2|M .9 1 L .25 3","Stroke 1: draw a short slanting line down. Stroke 2: draw a long slanting line down, past the bottom line."],"z":["M 0 1 L .9 1 L 0 2 L .9 2","Draw a line across, slant down to the left, then draw a line across the bottom."],"A":["M .6 0 L 0 2|M .6 0 L 1.2 2|M .25 1.3 L .95 1.3","Stroke 1: slant down to the left. Stroke 2: slant down to the right. Stroke 3: draw a line across the middle."],"B":["M 0 0 L 0 2|M 0 0 L .5 0 A .5 .5 .5 .5 -90 90 L 0 1|M 0 1 L .55 1 A .55 1.5 .55 .5 -90 90 L 0 2","Stroke 1: draw a line down. Stroke 2: draw a bump at the top. Stroke 3: draw a bump at the bottom."],"C":["A .6 1 .6 1 -40 -320","Draw a big magic c: start near the top, curve around to the left and down."],"D":["M 0 0 L 0 2|M 0 0 L .4 0 A .4 1 .7 1 -90 90 L 0 2","Stroke 1: draw a line down. Stroke 2: start at the top and curve around to the bottom."],"E":["M 0 0 L 0 2|M 0 0 L 1 0|M 0 1 L .8 1|M 0 2 L 1 2","Stroke 1: draw a line down. Strokes 2, 3 and 4: draw lines across the top, the middle and the bottom."],"F":["M 0 0 L 0 2|M 0 0 L 1 0|M 0 1 L .8 1","Stroke 1: draw a line down. Stroke 2: draw a line across the top. Stroke 3: draw a short line across the middle."],"G":["A .6 1 .6 1 -40 -350|M .65 1.05 L 1.15 1.05","Stroke 1: draw a big magic c. Stroke 2: draw a short line across the middle."],"H":["M 0 0 L 0 2|M 1 0 L 1 2|M 0 1 L 1 1","Stroke 1: draw a line down. Stroke 2: draw another line down. Stroke 3: draw a line across the middle."],"I":["M .3 0 L .3 2","Draw a straight line down."],"J":["M .8 0 L .8 1.5 A .45 1.5 .35 .5 0 150","Draw a line down and curve it to the left at the bottom."],"K":["M 0 0 L 0 2|M 1 0 L 0 1.05|M .3 .8 L 1 2","Stroke 1: draw a line down. Stroke 2: slant in to the middle. Stroke 3: slant out to the bottom."],"L":["M 0 0 L 0 2|M 0 2 L .9 2","Stroke 1: draw a line down. Stroke 2: draw a line across the bottom."],"M":["M 0 0 L 0 2|M 0 0 L .6 1.5 L 1.2 0|M 1.2 0 L 1.2 2","Stroke 1: draw a line down. Stroke 2: slant down to the middle, then up to the top. Stroke 3: draw a line down."],"N":["M 0 0 L 0 2|M 0 0 L 1 2|M 1 2 L 1 0","Stroke 1: draw a line down. Stroke 2: slant down to the bottom right. Stroke 3: draw a line up."],"O":["A .6 1 .6 1 -70 -430","Draw a big circle, like a magic c all the way around."],"P":["M 0 0 L 0 2|M 0 0 L .5 0 A .5 .55 .5 .55 -90 90 L 0 1.1","Stroke 1: draw a line down. Stroke 2: draw a bump at the top."],"Q":["A .6 1 .6 1 -70 -430|M .7 1.5 L 1.1 2.1","Stroke 1: draw a big circle. Stroke 2: draw a little slanting line at the bottom."],"R":["M 0 0 L 0 2|M 0 0 L .5 0 A .5 .55 .5 .55 -90 90 L 0 1.1|M .45 1.1 L 1 2","Stroke 1: draw a line down. Stroke 2: draw a bump at the top. Stroke 3: slant out to the bottom."],"S":["A .5 .5 .5 .5 -30 -270 A .5 1.5 .55 .5 -90 150","Draw a big curvy snake: curve to the left, then curve back to the right."],"T":["M .6 0 L .6 2|M 0 0 L 1.2 0","Stroke 1: draw a line down. Stroke 2: draw a line across the top."],"U":["M 0 0 L 0 1.45 A .55 1.45 .55 .55 180 0 L 1.1 0","Draw down, curve around the bottom, and go back up."],"V":["M 0 0 L .6 2 L 1.2 0","Draw a line down to a point, then up again."],"W":["M 0 0 L .4 2 L .8 0 L 1.2 2 L 1.6 0","Draw down, up, down, up, to make two points."],"X":["M 0 0 L 1.1 2|M 1.1 0 L 0 2","Stroke 1: slant down to the right. Stroke 2: slant down to the left."],"Y":["M 0 0 L .55 1.05|M 1.1 0 L .55 1.05 L .55 2","Stroke 1: slant down to the middle. Stroke 2: slant down to the middle, then straight down."],"Z":["M 0 0 L 1 0 L 0 2 L 1 2","Draw a line across the top, slant down to the left, then draw a line across the bottom."]};
+  function parsePath(str) {
+    var t = str.split(/\s+/), i = 0, pts = [], cmd, k, n, a;
+    while (i < t.length) {
+      cmd = t[i++];
+      if (cmd === "M" || cmd === "L") { pts.push([+t[i], +t[i + 1]]); i += 2; }
+      else if (cmd === "A") {
+        var cx = +t[i], cy = +t[i + 1], rx = +t[i + 2], ry = +t[i + 3], a0 = +t[i + 4], a1 = +t[i + 5];
+        i += 6;
+        n = Math.max(6, Math.ceil(Math.abs(a1 - a0) / 10));
+        for (k = 0; k <= n; k++) { a = (a0 + (a1 - a0) * k / n) * Math.PI / 180; pts.push([cx + rx * Math.cos(a), cy + ry * Math.sin(a)]); }
+      } else i++;
+    }
+    return pts;
+  }
+  function glyphPolys(ch, w, h) {
+    var gl = GLYPHS[ch];
+    if (!gl) return null;
+    var s = h / 3.6, polys = gl[0].split("|").map(parsePath), mn = 1e9, mx = -1e9;
+    polys.forEach(function (p) { p.forEach(function (q) { mn = Math.min(mn, q[0]); mx = Math.max(mx, q[0]); }); });
+    var ox = w / 2 - (mn + mx) / 2 * s, oy = 0.3 * s;
+    return { s: s, oy: oy, polys: polys.map(function (p) { return p.map(function (q) { return [ox + q[0] * s, oy + q[1] * s]; }); }) };
+  }
+  function polyLen(p) { var l = 0, i; for (i = 1; i < p.length; i++) l += Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); return l; }
+  function pointAt(p, f) {
+    var want = polyLen(p) * f, acc = 0, i, d, t;
+    for (i = 1; i < p.length; i++) {
+      d = Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]);
+      if (acc + d >= want) { t = d ? (want - acc) / d : 0; return [p[i - 1][0] + (p[i][0] - p[i - 1][0]) * t, p[i - 1][1] + (p[i][1] - p[i - 1][1]) * t]; }
+      acc += d;
+    }
+    return p[p.length - 1];
+  }
+  function pathPolys(x, polys) {
+    x.beginPath();
+    polys.forEach(function (p) {
+      x.moveTo(p[0][0], p[0][1]);
+      for (var i = 1; i < p.length; i++) x.lineTo(p[i][0], p[i][1]);
+    });
+  }
+  function drawGlyph(G, w) {
+    var s = G.s, dots = [];
+    function arrow(p) {
+      if (polyLen(p) < 0.4 * s) return;
+      var m = pointAt(p, 0.5), m2 = pointAt(p, 0.53), ang = Math.atan2(m2[1] - m[1], m2[0] - m[0]);
+      g.save();
+      g.translate(m[0], m[1]);
+      g.rotate(ang);
+      g.beginPath();
+      g.moveTo(10, 0);
+      g.lineTo(-6, -8);
+      g.lineTo(-6, 8);
+      g.closePath();
+      g.fillStyle = "#2b3550";
+      g.fill();
+      g.restore();
+    }
+    g.setLineDash([6, 8]);
+    g.lineWidth = 2;
+    g.strokeStyle = "#b9c6d8";
+    g.beginPath();
+    [0, 1, 2].forEach(function (i) { g.moveTo(10, G.oy + i * s); g.lineTo(w - 10, G.oy + i * s); });
+    g.stroke();
+    g.setLineDash([]);
+    g.lineCap = "round";
+    g.lineJoin = "round";
+    pathPolys(g, G.polys);
+    g.lineWidth = 0.3 * s;
+    g.strokeStyle = "#f1ece0";
+    g.stroke();
+    g.setLineDash([2, 12]);
+    g.lineWidth = 4;
+    g.strokeStyle = "#7d879e";
+    pathPolys(g, G.polys);
+    g.stroke();
+    g.setLineDash([]);
+    G.polys.forEach(arrow);
+    G.polys.forEach(function (p, i) {
+      var x = p[0][0], y = p[0][1], q = pointAt(p, 0.15), ang = Math.atan2(q[1] - y, q[0] - x), tries = 0;
+      while (tries < 3 && dots.some(function (d) { return Math.hypot(d[0] - x, d[1] - y) < 24; })) { x += Math.cos(ang) * 26; y += Math.sin(ang) * 26; tries++; }
+      dots.push([x, y]);
+      g.beginPath();
+      g.arc(x, y, 11, 0, Math.PI * 2);
+      g.fillStyle = "#d98a80";
+      g.fill();
+      g.lineWidth = 3;
+      g.strokeStyle = "#2b3550";
+      g.stroke();
+      g.fillStyle = "#2b3550";
+      g.font = "bold 14px Arial, sans-serif";
+      g.textAlign = "center";
+      g.textBaseline = "middle";
+      g.fillText(String(i + 1), x, y + 1);
+    });
+  }
+
   function drawGuide() {
     var w = gc.clientWidth, h = gc.clientHeight, fs = h * 0.85;
     var font = function (s) { return "bold " + s + "px 'Arial Rounded MT Bold', 'Trebuchet MS', Verdana, sans-serif"; };
@@ -484,6 +638,8 @@
     if (m > w * 0.92) { fs = fs * w * 0.92 / m; g.font = font(fs); }
     gfont = g.font;
     gfs = fs;
+    var G = glyphPolys(guide, w, h);
+    if (G) { drawGlyph(G, w); return; }
     g.textAlign = "center";
     g.textBaseline = "middle";
     g.fillStyle = "#f1ece0";
@@ -493,31 +649,11 @@
     g.lineCap = "round";
     g.strokeStyle = "#7d879e";
     g.strokeText(guide, w / 2, h / 2);
-    gStart = null;
-    if (guide.length === 1) {
-      var up = guide === guide.toUpperCase();
-      var f = START[(up ? UP : LO).charAt(ALPHA.indexOf(guide.toUpperCase()))];
-      var mm = g.measureText(guide);
-      var L = w / 2 - mm.actualBoundingBoxLeft, R = w / 2 + mm.actualBoundingBoxRight;
-      var T = h / 2 - mm.actualBoundingBoxAscent, B = h / 2 + mm.actualBoundingBoxDescent;
-      var x = L + f[0] * (R - L), y = T + f[1] * (B - T);
-      gStart = [x, y];
-      g.setLineDash([]);
-      g.beginPath();
-      g.arc(x, y, 14, 0, Math.PI * 2);
-      g.fillStyle = "#d98a80";
-      g.fill();
-      g.lineWidth = 3;
-      g.strokeStyle = "#2b3550";
-      g.stroke();
-      g.fillStyle = "#2b3550";
-      g.font = "bold 16px Arial, sans-serif";
-      g.fillText("1", x, y + 1);
-    }
   }
 
   function size() {
     segs = [];
+    strokes = [];
     var r = gc.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
     [gc, dc].forEach(function (c) {
       c.width = Math.round(r.width * dpr);
@@ -535,6 +671,7 @@
   function clearDraw() {
     d.clearRect(0, 0, dc.clientWidth, dc.clientHeight);
     segs = [];
+    strokes = [];
     clearTimeout(timer);
     document.getElementById("tMsg").textContent = "";
     document.getElementById("nextBox").hidden = true;
@@ -559,7 +696,7 @@
   }
 
   function traceScore() {
-    var w = gc.clientWidth, h = gc.clientHeight, S = 0.3;
+    var w = gc.clientWidth, h = gc.clientHeight, S = 0.3, G = glyphPolys(guide, w, h);
     function mk() {
       var c = document.createElement("canvas");
       c.width = Math.max(1, Math.round(w * S));
@@ -580,19 +717,26 @@
       segs.forEach(function (q) { x.beginPath(); x.moveTo(q[0], q[1]); x.lineTo(q[2], q[3]); x.stroke(); });
     }
     function px(x) { var c = x.canvas; return x.getImageData(0, 0, c.width, c.height).data; }
-    var L = mk(), K = mk(), Z = mk(), T = mk(), F = mk(), O = mk();
-    L.fillText(guide, w / 2, h / 2);
-    K.fillText(guide, w / 2, h / 2);
-    K.globalCompositeOperation = "destination-out";
-    K.lineWidth = gfs * 0.09;
-    K.strokeText(guide, w / 2, h / 2);
-    Z.fillText(guide, w / 2, h / 2);
-    Z.lineWidth = gfs * 0.12;
-    Z.strokeText(guide, w / 2, h / 2);
-    O.lineWidth = 1 / S;
-    O.strokeText(guide, w / 2, h / 2);
+    var L = mk(), K = mk(), Z = mk(), T = mk(), F = mk(), O = mk(), outLen = 0;
+    if (G) {
+      pathPolys(L, G.polys); L.lineWidth = 0.3 * G.s; L.stroke();
+      pathPolys(K, G.polys); K.lineWidth = 0.12 * G.s; K.stroke();
+      pathPolys(Z, G.polys); Z.lineWidth = 0.55 * G.s; Z.stroke();
+      G.polys.forEach(function (p) { outLen += 2 * polyLen(p); });
+    } else {
+      L.fillText(guide, w / 2, h / 2);
+      K.fillText(guide, w / 2, h / 2);
+      K.globalCompositeOperation = "destination-out";
+      K.lineWidth = gfs * 0.09;
+      K.strokeText(guide, w / 2, h / 2);
+      Z.fillText(guide, w / 2, h / 2);
+      Z.lineWidth = gfs * 0.12;
+      Z.strokeText(guide, w / 2, h / 2);
+      O.lineWidth = 1 / S;
+      O.strokeText(guide, w / 2, h / 2);
+    }
     ink(T, 6);
-    ink(F, gfs * 0.13 + 14);
+    ink(F, G ? 0.55 * G.s : gfs * 0.13 + 14);
     var k = px(K), l = px(L), z = px(Z), t = px(T), f = px(F), core = 0, cov = 0, inkN = 0, inZ = 0, i;
     for (i = 3; i < k.length; i += 4) if (k[i] > 40) core++;
     var tgt = core < 20 ? l : k;
@@ -604,15 +748,36 @@
     var o = px(O), oc = 0, len = 0;
     for (i = 3; i < o.length; i += 4) if (o[i] > 40) oc++;
     segs.forEach(function (q) { len += Math.hypot(q[2] - q[0], q[3] - q[1]); });
-    return { c: core ? cov / core : 0, acc: inkN ? inZ / inkN : 0, len: len, outLen: oc / S };
+    return { c: core ? cov / core : 0, acc: inkN ? inZ / inkN : 0, len: len, outLen: G ? outLen : oc / S };
+  }
+
+  function drawnStroke(k) {
+    var a = strokes[k], b = k + 1 < strokes.length ? strokes[k + 1] : segs.length, pts = [[segs[a][0], segs[a][1]]], j;
+    for (j = a; j < b; j++) pts.push([segs[j][2], segs[j][3]]);
+    return pts;
   }
 
   function evalTrace() {
     var msg = document.getElementById("tMsg");
     if (!segs.length) { msg.textContent = "Use your finger to trace the letter."; return; }
+    var G = glyphPolys(guide, gc.clientWidth, gc.clientHeight);
+    if (G) {
+      var n = G.polys.length, tol = Math.max(40, G.s * 0.5), have = Math.min(strokes.length, n), k, st, dr, a1, e1, e2;
+      for (k = 0; k < have; k++) {
+        st = G.polys[k][0];
+        dr = drawnStroke(k);
+        if (Math.hypot(dr[0][0] - st[0], dr[0][1] - st[1]) > tol) { msg.textContent = "Start stroke " + (k + 1) + " at red dot " + (k + 1) + "!"; return; }
+        if (polyLen(G.polys[k]) > 0.5 * G.s && polyLen(dr) > 0.3 * G.s) {
+          a1 = pointAt(dr, 0.25);
+          e1 = pointAt(G.polys[k], 0.25);
+          e2 = pointAt(G.polys[k], 0.75);
+          if (Math.hypot(a1[0] - e1[0], a1[1] - e1[1]) > Math.hypot(a1[0] - e2[0], a1[1] - e2[1])) { msg.textContent = "Follow the arrow! Go the other way."; return; }
+        }
+      }
+      if (strokes.length < n) { msg.textContent = "Good! Now stroke " + (strokes.length + 1) + ". Start at red dot " + (strokes.length + 1) + "."; return; }
+    }
     var r = traceScore();
-    if (gStart && Math.hypot(segs[0][0] - gStart[0], segs[0][1] - gStart[1]) > 45) msg.textContent = "Start at the red dot!";
-    else if (r.len > 3 * r.outLen) msg.textContent = "Slow down! Follow the dots.";
+    if (r.len > (G ? 1.5 : 3) * r.outLen) msg.textContent = "Slow down! Follow the dots.";
     else if (r.c >= 0.9 && r.acc >= 0.93) { msg.textContent = "\u2605 Great tracing! You did it!"; say("Great job!"); if (!gotTrace[guide]) { gotTrace[guide] = 1; addStars(2); missionEvent("trace"); } showNext(); }
     else if (r.acc < 0.85) msg.textContent = "Good try! Stay on the dots.";
     else if (r.c < 0.9) msg.textContent = "Keep going! Follow all the dots.";
@@ -631,7 +796,7 @@
     document.getElementById("phLetter").textContent = U + U.toLowerCase();
     var i = ALPHA.indexOf(U);
     document.getElementById("phNote").textContent = U === "X" ? "X makes the sound /ks/, like at the end of box." : U + " makes the sound /" + SND[i] + "/, like in " + WORDS[i] + ".";
-    document.getElementById("now").textContent = "Trace the letter: " + ch + ". Start at the red dot.";
+    document.getElementById("now").textContent = "Trace the letter: " + ch + ". " + (GLYPHS[ch] ? GLYPHS[ch][1] + " Start at red dot 1." : "");
     clearDraw();
     drawGuide();
   }
@@ -646,6 +811,7 @@
     d.moveTo(last[0], last[1]);
     d.lineTo(last[0] + 0.1, last[1]);
     d.stroke();
+    strokes.push(segs.length);
     segs.push([last[0], last[1], last[0] + 0.1, last[1]]);
     clearTimeout(timer);
     e.preventDefault();
@@ -710,7 +876,7 @@
         say(WORDS[n]);
         if (n === target) {
           if (!solved) { score++; solved = true; addStars(1); missionEvent("game"); }
-          gMsg.textContent = "Yes! " + ALPHA[target] + " is for " + WORDS[target] + ".";
+          gMsg.textContent = "Safi! " + ALPHA[target] + " is for " + WORDS[target] + ".";
           document.getElementById("gScore").textContent = "Stars: " + score;
         } else {
           gMsg.textContent = "Try again!";
@@ -729,7 +895,7 @@
     b.addEventListener("click", function () { say(b.previousElementSibling.innerText); });
   });
 
-  var RH = [["cat","hat","dog","sun"],["pig","wig","cup","bed"],["moon","spoon","tree","fish"],["bug","rug","hat","pen"],["bell","shell","car","box"]];
+  var RH = [["tea","bee","cow","sun"],["goat","boat","hen","drum"],["sun","run","goat","tea"],["hen","ten","cow","moon"],["rain","train","drum","bee"]];
   var SK = ["Uppercase letters", "Lowercase letters", "Letter sounds", "Rhymes"], SKL = ["#upper", "#lower", "#phonics", "#rhymes"];
   var qs = [], qi = 0, sc = [0, 0, 0, 0];
   var qProg = document.getElementById("qProg"), qText = document.getElementById("qText"), qCh = document.getElementById("qChoices"), qRes = document.getElementById("qRes");
@@ -835,11 +1001,11 @@
   }
   game("gRhyme", function () {
     var r = RH[rnd(RH.length)], o = shuf(r.slice(1)), t = "Which word rhymes with " + r[0] + "?";
-    return { text: t, say: t + " " + o.join(", "), opts: o, ans: r[1], ok: "Yes! " + r[0] + " rhymes with " + r[1] + "." };
+    return { text: t, say: t + " " + o.join(", "), opts: o, ans: r[1], ok: "Safi! " + r[0] + " rhymes with " + r[1] + "." };
   });
   game("gPair", function () {
     var t = rnd(26), lo = function (n) { return ALPHA[n].toLowerCase(); };
-    return { text: "Find the little letter that goes with " + ALPHA[t] + ".", say: "Find the lowercase letter that goes with " + ALPHA[t], opts: shuf([t].concat(pickN(2, [t]))).map(lo), ans: lo(t), ok: "Yes! " + ALPHA[t] + " and " + lo(t) + " are partners." };
+    return { text: "Find the little letter that goes with " + ALPHA[t] + ".", say: "Find the lowercase letter that goes with " + ALPHA[t], opts: shuf([t].concat(pickN(2, [t]))).map(lo), ans: lo(t), ok: "Safi! " + ALPHA[t] + " and " + lo(t) + " are partners." };
   });
 
   document.getElementById("resetStars").addEventListener("click", function () {
@@ -855,27 +1021,27 @@
   renderStars();
 
   var BOOKS = [
-    { t: "Pip and the Big Red Hat", d: "Pip finds a hat that is too big to lift.", p: [
-      ["Pip is a little chick.", "d|m-yellow,110,45,80"],
-      ["Pip sees a big red hat.", "d|m-yellow,50,45,75;p-hat,170,45,85"],
-      ["Can Pip lift the hat? No, no, no!", "d|m-yellow,50,50,70;p-hat,150,40,110"],
-      ["Rosie comes. \"Jambo, Rosie!\" says Pip. Pull, pull, pull!", "d|m-yellow,25,50,70;p-hat,115,55,75;m-red,205,45,75"],
-      ["Bo comes to help too. Pull, pull, pull!", "d|m-yellow,5,52,62;p-hat,80,60,70;m-red,155,52,62;m-blue,232,52,62"],
-      ["Pop! The hat jumps up. Pip, Rosie and Bo all cheer!", "d|p-star,15,5,35;p-star,250,10,35;p-hat,112,0,75;m-yellow,30,58,68;m-red,118,58,68;m-blue,205,58,68"]] },
-    { t: "Rosie's Rainy Day", d: "Rosie and Bo share an umbrella in the rain.", p: [
-      ["Rosie looks out. Rain, rain, rain!", "r|p-cloud,105,0,90;p-rain,100,30,100;m-red,112,60,72"],
+    { t: "Pip and the Matatu", d: "Pip rides a bright matatu to the market.", p: [
+      ["Pip is going to the market. Pip waits by the road.", "d|p-acacia,190,20,90;m-yellow,80,52,70"],
+      ["Beep, beep! Here comes a bright matatu.", "d|p-matatu,120,30,130;m-yellow,30,52,62"],
+      ["Rosie waves from the window. \"Jambo, Pip!\"", "d|p-matatu,80,30,130;m-red,130,40,38;m-yellow,15,52,62"],
+      ["Pip hops in. Bo is inside too!", "d|p-matatu,80,30,130;m-yellow,100,40,36;m-blue,150,40,36"],
+      ["Zoom, zoom, zoom! The matatu rolls past the tall acacia trees.", "d|p-acacia,10,15,80;p-matatu,95,30,130;p-acacia,225,25,75"],
+      ["At the market, they share warm mandazi. Yum, yum, yum!", "d|m-yellow,10,52,62;m-red,80,52,62;p-mandazi,145,58,80;m-blue,228,52,62"]] },
+    { t: "Rosie and the Long Rains", d: "Rosie and Bo share an umbrella when the rains come to the shamba.", p: [
+      ["The long rains come to the shamba. Rain, rain, rain!", "r|p-cloud,105,0,90;p-rain,100,30,100;p-acacia,5,42,70;m-red,125,60,72"],
       ["Rosie has a red umbrella.", "r|p-rain,0,20,110;p-rain,190,20,110;p-umb,100,12,100;m-red,112,60,72"],
       ["Plip, plop, plip, plop. The rain taps the umbrella.", "r|p-rain,0,10,120;p-rain,180,10,120;p-umb,100,10,100;p-puddle,190,92,80"],
       ["Bo splashes in a puddle. Splash, splash, splash!", "r|p-rain,10,0,130;p-puddle,100,92,100;m-blue,118,45,72"],
-      ["Rosie and Bo share the umbrella. Snug and dry.", "r|p-umb,95,0,110;m-red,88,58,66;m-blue,148,58,66;p-rain,0,20,100;p-rain,205,20,100"],
-      ["Then out comes the sun. Rosie and Bo smile.", "d|p-sun,110,0,80;m-red,70,60,70;m-blue,160,60,70"]] },
-    { t: "Bo Counts the Stars", d: "Bo counts stars in the night sky.", p: [
-      ["It is night. Bo looks up at the sky.", "n|p-moon,220,5,60;p-star,40,15,30;p-star,150,8,25;m-blue,110,55,80"],
+      ["Rosie and Bo share the umbrella. Snug and dry, they sip warm chai.", "r|p-umb,95,0,110;m-red,88,58,66;m-blue,148,58,66;p-rain,0,20,100;p-rain,205,20,100"],
+      ["Then out comes the sun. The shamba is green and happy.", "d|p-sun,110,0,80;p-acacia,5,40,75;m-red,100,60,62;m-blue,165,60,62"]] },
+    { t: "Bo Counts the Stars", d: "Bo counts stars on the savanna at night.", p: [
+      ["It is night on the savanna. Bo looks up at the sky.", "n|p-moon,220,5,60;p-star,40,15,30;p-acacia,10,40,75;m-blue,130,55,75"],
       ["One star, two stars, three stars!", "n|p-star,50,10,60;p-star,120,0,60;p-star,190,10,60;m-blue,118,70,70"],
       ["Four stars, five stars, six stars!", "n|p-star,20,5,40;p-star,100,5,40;p-star,180,5,40;p-star,60,45,40;p-star,140,45,40;p-star,220,45,40;m-blue,230,80,60"],
-      ["Pip is sleepy. Pip yawns a big yawn.", "n|p-moon,30,10,50;p-star,230,15,35;m-yellow,120,55,80"],
-      ["Rosie hums a soft little song.", "n|p-star,40,20,35;p-star,230,20,35;m-red,120,55,80"],
-      ["Bo counts one more star. Then Bo falls asleep. Good night, Bo!", "n|p-moon,40,10,60;p-star,200,15,40;p-star,240,50,30;m-blue,110,60,80"]] }
+      ["Tembo the elephant yawns a big yawn.", "n|p-moon,30,10,50;p-star,230,15,35;p-tembo,100,30,100;m-blue,30,60,55"],
+      ["Twiga the giraffe hums a soft song.", "n|p-star,40,20,35;p-star,230,20,35;p-twiga,110,15,110;m-blue,30,60,55"],
+      ["Bo counts one more star. Then Bo falls asleep. Lala salama, Bo!", "n|p-moon,40,10,60;p-star,200,15,40;p-star,240,50,30;m-blue,110,60,80"]] }
   ];
   function scene(code) {
     var parts = code.split("|"), bg = { d: "#dce8f4", r: "#b7c5d8", n: "#2b3550" }[parts[0]], gr = { d: "#f1e3a6", r: "#c8d3dc", n: "#3d4a6b" }[parts[0]];
@@ -967,7 +1133,7 @@
     { q: "My stars are gone", k: ["gone", "lost", "disappear", "missing", "saved", "reset"], a: "Stars are saved on this device. They can disappear if the browser is cleared or a private window is used. A grown-up can check this.", go: "" },
     { q: "What can I read?", k: ["book", "read", "story", "stories"], a: "Open Books and pick a story. Tap Read to me and I will read it out loud!", go: "#books" },
     { q: "How do the games work?", k: ["game", "play", "match"], a: "Open Games. Tap the right answer to win a star. Tap Hear it to listen to the question.", go: "#games" },
-    { q: "Help me with rhymes", k: ["rhyme", "rhymes", "poem", "song"], a: "Open Rhymes and tap Hear it. Listen for words that sound the same at the end, like wall and fall.", go: "#rhymes" },
+    { q: "Help me with rhymes", k: ["rhyme", "rhymes", "poem", "song"], a: "Open Rhymes and tap Hear it. Listen for words that sound the same at the end, like tree and see.", go: "#rhymes" },
     { q: "The page looks stuck", k: ["stuck", "freeze", "broken", "slow", "screen", "zoom", "phone", "problem", "bug"], a: "Try refreshing the page and hold the phone upright. If it is still stuck, ask a grown-up to try another browser, like Chrome or Safari.", go: "" }
   ];
   var hPanel = document.getElementById("helpPanel"), hBtn = document.getElementById("helpBtn"), hLog = document.getElementById("helpLog");
@@ -1039,12 +1205,17 @@
   var PREF = ["en-KE", "en-TZ", "en-UG", "en-ZA", "en-NG", "en-GB"];
   function vl(v) { return v.lang.replace("_", "-"); }
   function loadVoices() {
-    if (!window.speechSynthesis) return;
+    var note = document.getElementById("voiceNote");
+    if (!window.speechSynthesis) { note.textContent = "This browser cannot read aloud. Try Chrome or Safari."; return; }
     var sel = document.getElementById("voiceSel"), saved = "", auto = null, i, j;
     try { saved = localStorage.getItem("jlVoice") || ""; } catch (e) {}
     voices = speechSynthesis.getVoices().filter(function (v) { var l = vl(v).slice(0, 2); return l === "en" || l === "sw"; });
     for (i = 0; i < PREF.length && !auto; i++) {
       for (j = 0; j < voices.length; j++) { if (vl(voices[j]).indexOf(PREF[i]) === 0) { auto = voices[j]; break; } }
+    }
+    if (!auto) {
+      var en = voices.filter(function (v) { return vl(v).slice(0, 2) === "en"; });
+      auto = en.filter(function (v) { return v.default; })[0] || en[0] || null;
     }
     sel.innerHTML = "";
     var o = document.createElement("option");
@@ -1059,6 +1230,7 @@
       sel.appendChild(op);
       if (saved && v.name === saved) { sel.value = String(n); VOICE = v; }
     });
+    note.textContent = voices.length ? "" : "No reading voice found yet. Check the device's text-to-speech settings.";
   }
   document.getElementById("voiceSel").addEventListener("change", function () {
     var v = this.value === "" ? null : voices[parseInt(this.value, 10)];
@@ -1067,7 +1239,8 @@
     say("Hello! Let us read together.");
   });
   document.getElementById("voiceTest").addEventListener("click", function () { say("Hello! Let us read together."); });
-  if (window.speechSynthesis) { speechSynthesis.onvoiceschanged = loadVoices; loadVoices(); }
+  if (window.speechSynthesis) { speechSynthesis.onvoiceschanged = loadVoices; setTimeout(loadVoices, 600); setTimeout(loadVoices, 2000); }
+  loadVoices();
   renderMission();
   window.addEventListener("resize", size);
   size();
